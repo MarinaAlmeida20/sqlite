@@ -12,7 +12,8 @@ c.execute("SELECT * FROM customers")
 #print(c.fetchmany(3))
 items = c.fetchall()
 
-print(items)
+for item in items:
+    print(item)
 
 
 
