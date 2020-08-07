@@ -13,7 +13,7 @@ c.execute("SELECT * FROM customers")
 items = c.fetchall()
 
 for item in items:
-    print(item[0])
+    print(item[0] + " " + item[1] + " " + item[2])
 
 
 
