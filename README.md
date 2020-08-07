@@ -1,2 +1,2 @@
 # sqlite
- QLite Databases With Python
+ SQLite Databases With Python
