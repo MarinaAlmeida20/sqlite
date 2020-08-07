@@ -7,7 +7,7 @@ conn = sqlite3.connect('customer.db')
 c = conn.cursor()
 
 # Create a Table
-c.execute("SELECT * FROM customers WHERE last_name = 'Elder'")
+c.execute("SELECT * FROM customers WHERE last_name LIKE 'Br%'")
 #print(c.fetchone()[0])
 #print(c.fetchmany(3))
 items = c.fetchall()
