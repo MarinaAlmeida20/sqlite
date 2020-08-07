@@ -12,8 +12,10 @@ c.execute("SELECT * FROM customers")
 #print(c.fetchmany(3))
 items = c.fetchall()
 
+print("NAME " +    "\t\t\tEMAIL")
+print("==========" + "\t\t===============")
 for item in items:
-    print(item[0] + " " + item[1] + " | " + item[2])
+    print(item[0] + " " + item[1] + " \t\t" + item[2])
 
 
 
