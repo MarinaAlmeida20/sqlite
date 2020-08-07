@@ -7,16 +7,13 @@ conn = sqlite3.connect('customer.db')
 c = conn.cursor()
 
 # Create a Table
-c.execute("SELECT * FROM customers")
+c.execute("SELECT rowid, * FROM customers")
 #print(c.fetchone()[0])
 #print(c.fetchmany(3))
 items = c.fetchall()
 
-print("NAME " +    "\t\t\tEMAIL")
-print("==========" + "\t\t===============")
 for item in items:
-    print(item[0] + " " + item[1] + " \t\t" + item[2])
-
+    print(item)
 
 
 
