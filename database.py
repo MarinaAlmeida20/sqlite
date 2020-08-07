@@ -6,19 +6,16 @@ conn = sqlite3.connect('customer.db')
 # Create a cursor
 c = conn.cursor()
 
-many_customers = [
-                    ('Wes', 'Brown', 'wes@brown.com'),
-                    ('Steph', 'Kuewa', 'steph@kuewa.com'), 
-                    ('Dan', 'Pas', 'dan@pas.com'),
-                ]
-
 # Create a Table
-c.executemany("INSERT INTO customers VALUES (?,?,?)", many_customers)
+c.execute("SELECT * FROM customers")
+#c.fetchone()
+#c.fetchmany(3)
+print(c.fetchall())
 
 
 
 
-print("Command executed succesfully...")
+#print("Command executed succesfully...")
 # Commit our command
 conn.commit()
 
