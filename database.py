@@ -8,9 +8,9 @@ c = conn.cursor()
 
 # Create a Table
 c.execute("SELECT * FROM customers")
-#c.fetchone()
+print(c.fetchone())
 #c.fetchmany(3)
-print(c.fetchall())
+#print(c.fetchall())
 
 
 
